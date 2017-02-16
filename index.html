@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+   <!-- <link href="leaflet/leaflet.draw.css"> -->
+    <link href="leaflet/leaflet.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <script src="leaflet/leaflet.js"></script>
+
+</head>
+<body>
+
+
+
+      <div class="container-fluid">
+
+          <!-- navigation bar -->
+          <nav class="navbar navbar-inverse">
+              <div class="container-fluid">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="#" id="logo-text"><span class="logo"><img src="image/logo3.png"> </span>AaltoGuide</a>
+                  </div>
+
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                      <ul class="nav navbar-nav" id="tools">
+                          <li><a href="#"><span><img src="image/settings.png" title="Settings"> </span></a></li>
+                          <li><a href="#"><span><img src="image/layers.png" title="Map Layers"> </span></a></li>
+                          <li><a href="#"><span><img src="image/globe.png" title="Extent"></span> </a></li>
+                          <li><a href="index.html"><span><img src="image/home.png" title="Home"></span> </a></li>
+						  <li><a href="inside.html"><span><img src="image/inside.png" title="Inside Building"></span></a></li>
+						  <li><a href="route.html"><span><img src="image/route.png" title="Route Map"></span></a></li>
+
+                      </ul>
+
+                      <!-- testing new search -->
+                      <div class="row">
+                          <div class="col-md-4" id="mov-right">
+                              <form class="navbar-form navbar-left">
+                                  <div class="input-group"  id="search-app">
+                                      <input class="form-control" type="text" placeholder="Search Class Room">
+                                      <span class="input-group-btn">
+                                          <button class="btn btn-primary" type="submit">
+                                              <span class="glyphicon glyphicon-search"></span>
+                                          </button>
+                                      </span>
+                                  </div>
+
+                              </form>
+
+                          </div>
+
+
+                      </div>
+
+                      <!-- testing new search -->
+
+                  </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+          </nav>
+
+          <!-- navigation bar -->
+
+
+
+
+          <div class="row">
+              <div class="col-md-3" id="sidebar-setting">
+                  <!-- sidenav-->
+                  <div id="sidenav" class="col-md-12">
+                      <ul class="nav nav-pills" id="travel-icons">
+                          <li role="presentation"><a href="#"><img src="image/directions.png" class="direction" title="Get Direction"></a></li>
+                          <li role="presentation"><a href="#"><img src="image/walk.png" class="walk" title="Walking"> </a></li>
+                          <li role="presentation"><a href="#"><img src="image/cycling.png" class="cycling" title="Cycling"> </a></li>
+                          <li role="presentation"><a href="#"><img src="image/car.png" class="car" title="Driving"> </a></li>
+                      </ul>
+
+                      <div class="row">
+                          <div class="col-md-3">
+                              <form class="navbar-form">
+                                  <div class="input-group direction-from">
+
+                                      <div class="input-group-btn">
+                                          <button class="btn btn-default" type="submit">
+                                              <i class="glyphicon glyphicon-record"></i>
+                                          </button>
+                                      </div>
+
+                                      <input type="text" class="form-control test"  placeholder="Start Point">
+                                  </div>
+                              </form>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-3">
+                              <form class="navbar-form">
+                                  <div class="input-group direction-from">
+                                      <div class="input-group-btn">
+                                          <button class="btn btn-default" type="submit">
+                                              <i class="glyphicon glyphicon-map-marker"></i>
+                                          </button>
+                                      </div>
+                                      <input type="text" class="form-control test"  placeholder="Destination">
+                                  </div>
+                              </form>
+                          </div>
+                      </div>
+
+                      <hr>
+
+
+                      <div class="row">
+                          <div class="col-md-3">
+
+                              <!-- drop down for buildings -->
+                              <div class="dropdown">
+                                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                      <span class="decoration-text">Search Class By Building</span>
+                                      <span class="caret"></span>
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="buildings">
+                                      <li><a href="#">Design factory</a></li>
+                                      <li><a href="#">Urban Mill</a></li>
+                                      <li><a href="#">Main building</a></li>
+                                      <li role="separator" class="divider"></li>
+                                      <li><a href="#">Innopli 3D</a></li>
+                                  </ul>
+                              </div>
+                              <!-- drop down for buildings -->
+                          </div>
+
+                      </div>
+
+                  </div>
+
+                  <!--sidenav-->
+				  </div>
+
+            
+
+              <!---- Map area or image -->
+              <div class="col-md-9" id="map-setting">
+                  <div id="map">
+                    <!-- <img src="image/in_interface.jpg" class="img-responsive">  -->
+                  </div>
+
+              </div>
+
+              <!---- Map area -->
+          </div>
+
+      <!-- footer -->
+
+          <div id="footer"></div>
+
+          <!-- footer-->
+      </div> <!-- container fluid -->
+
+      <script>
+          var map = L.map('map').setView([60.187391, 24.828728], 15);
+
+          L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+              attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          }).addTo(map);
+
+
+          var marker = L.marker([60.187391, 24.828728]).addTo(map)
+                  .bindPopup('This is Aalto University.<br> Where Science and Art Meet<br> Technology');
+
+      </script>  
+
+
+
+
+<!-- javascripts -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>
